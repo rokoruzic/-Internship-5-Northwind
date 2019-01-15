@@ -46,7 +46,7 @@ INSERT INTO Users
 VALUES
 ('Bruce','Wayne','12345678901','0958157124',N'Krstulovića dvori 4','Gotham city','USA','21000'),
 ('Mali','Zeus','32132132101','0951231233','Put gitku 25','Split','Croatia','20000'),
-('Jaca','Kosor','2131231231230','099666666','cesta bijelih udovica 69',N'Mokošica','Croatia','13332')
+('Jaca','Kosor','21312331230','099666666','cesta bijelih udovica 69',N'Mokošica','Croatia','13332')
 
 UPDATE Users
 set
