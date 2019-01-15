@@ -1,36 +1,40 @@
 ﻿--1. zadatak.
+
 CREATE TABLE Titles(
-ID INT IDENTITY(1,1),
-Title nvarchar(30),
+	ID INT IDENTITY(1,1),
+	Title nvarchar(30)
 )
-INSERT INTO Titles
+INSERT INTO Titles 
 (Title)
 Values
-('Director'),('Vice President'),('Investment associate'),('Investment analyst')
+('Director'),
+('Vice President'),
+('Investment associate'),
+('Investment analyst')
 
 CREATE TABLE Users(
-ID INT IDENTITY(1,1),
-FirstName nvarchar(30),
-LastName nvarchar(30),
-Oib nvarchar(11),
-MobilePhoneNumber nvarchar(15),
-Address nvarchar(50),
-City nvarchar(30),
-Country nvarchar(30),
-PostalNumber nvarchar(50)
+	ID INT IDENTITY(1,1),
+	FirstName nvarchar(30),
+	LastName nvarchar(30),
+	Oib nvarchar(11),
+	MobilePhoneNumber nvarchar(15),
+	Address nvarchar(50),
+	City nvarchar(30),
+	Country nvarchar(30),
+	PostalNumber nvarchar(50)
 )
 
 CREATE TABLE Transactions(
-ID INT IDENTITY(1,1),
-Date DateTime,
-State bit not null
+	ID INT IDENTITY(1,1),
+	Date DateTime,
+	State bit not null
 )
 CREATE TABLE Employees(
-ID INT IDENTITY(1,1),
-FirstName nvarchar(30),
-LastName nvarchar(30),
-Title nvarchar(30),
-Email nvarchar(50)
+	ID INT IDENTITY(1,1),
+	FirstName nvarchar(30),
+	LastName nvarchar(30),
+	Title nvarchar(30),
+	Email nvarchar(50)
 )
 ALTER TABLE Users
 ADD UNIQUE(Oib)
@@ -75,6 +79,7 @@ ORDER BY FirstName
 
 
 --2.Zadatak
+
 SELECT TOP 50 CompanyName, ContactName, ContactTitle, Address, City, Phone FROM Customers
 
 SELECT COUNT(CustomerID) CountOfCustomersWithDefinedFaxAndRegion FROM Customers
