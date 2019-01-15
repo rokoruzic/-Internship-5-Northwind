@@ -42,7 +42,7 @@ ALTER TABLE Employees
 ADD NotesOf nvarchar(100)
 
 INSERT INTO Users
-(FirstName,LastName,Oib,MobilePhoneNumber,Address1,City,Country,PostalNumber)
+(FirstName,LastName,Oib,MobilePhoneNumber,Address,City,Country,PostalNumber)
 VALUES
 ('Bruce','Wayne','12345678901','0958157124',N'Krstulovića dvori 4','Gotham city','USA','21000'),
 ('Mali','Zeus','32132132101','0951231233','Put gitku 25','Split','Croatia','20000'),
@@ -50,7 +50,7 @@ VALUES
 
 UPDATE Users
 set
-Address1 = 'Cesta sijedih udovica 69'
+Address = 'Cesta sijedih udovica 69'
 WHERE Oib='2131231231230'
 
 INSERT INTO Transactions
@@ -60,7 +60,7 @@ VALUES
 (2017/10/20,1,'Transaction done')
 
 INSERT INTO Employees
-(FirstName,LastName,Title,Email,Notes)
+(FirstName,LastName,Title,Email,NotesOf)
 VALUES
 ('Stjepan',N'Mesić','Director','bratstipe@skole.hr','funny guy,likes to tell jokes'),
 ('Kristian', N'Žolo', 'Vice president','asassino94@gmail.com','great vice president')
