@@ -13,8 +13,8 @@ ID INT IDENTITY(1,1),
 FirstName nvarchar(30),
 LastName nvarchar(30),
 Oib nvarchar(11),
-MobilePhoneNumber int,
-Address1 nvarchar(50),
+MobilePhoneNumber nvarchar(15),
+Address nvarchar(50),
 City nvarchar(30),
 Country nvarchar(30),
 PostalNumber nvarchar(50)
@@ -36,7 +36,7 @@ ALTER TABLE Users
 ADD UNIQUE(Oib)
 
 ALTER TABLE Transactions
-ADD Description1 nvarchar(50)
+ADD Description nvarchar(50)
 
 ALTER TABLE Employees
 ADD NotesOf nvarchar(100)
@@ -44,17 +44,17 @@ ADD NotesOf nvarchar(100)
 INSERT INTO Users
 (FirstName,LastName,Oib,MobilePhoneNumber,Address1,City,Country,PostalNumber)
 VALUES
-('Bruce','Wayne',12345678901,0958157124,N'Krstulovića dvori 4','Gotham city','USA',21000),
-('Mali','Zeus',32132132101,0951231233,'Put gitku 25','Split','Croatia',20000),
-('Jaca','Kosor',2131231231230,099666666,'cesta bijelih udovica 69',N'Mokošica','Croatia',13332)
+('Bruce','Wayne','12345678901','0958157124',N'Krstulovića dvori 4','Gotham city','USA','21000'),
+('Mali','Zeus','32132132101','0951231233','Put gitku 25','Split','Croatia','20000'),
+('Jaca','Kosor','2131231231230','099666666','cesta bijelih udovica 69',N'Mokošica','Croatia','13332')
 
 UPDATE Users
 set
-Address = 'Cesta sijedih udovica 69'
-WHERE Oib=2131231231230
+Address1 = 'Cesta sijedih udovica 69'
+WHERE Oib='2131231231230'
 
 INSERT INTO Transactions
-(Date,State,Description1)
+(Date,State,Description)
 VALUES
 (2018/12/25,0,'Transaction not done'),
 (2017/10/20,1,'Transaction done')
